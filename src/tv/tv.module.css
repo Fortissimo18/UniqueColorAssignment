@@ -11,12 +11,7 @@
   padding           : 0;
 }
 
-body {
-  position  : relative;
-  background: #e7e0a3;
-  padding   : 100px 0;
-  text-align: center;
-}
+
 
 .vintageTV {
   -moz-border-radius   : 5px;
@@ -28,6 +23,7 @@ body {
   z-index              : 0;
   width                : calc(var(--screen-width) + 61px);
   height               : calc(var(--screen-height) + 16px);
+  margin-top: 10vh;
 }
 
 .vintageTV:before {
