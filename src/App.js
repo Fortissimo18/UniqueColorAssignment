@@ -1,16 +1,21 @@
 import './App.css';
-import BasicElement from './basicElement/basicElement';
-import CanvasImage from './basicElement/canvasImage';
+import WorkingSkeleton from './workingSkeleton/workingSkeleton';
+import CanvasImage from './workingSkeleton/canvasImage';
 import SortingSelector from './sortingSelector/sortingSelector';
-import TV from './tv/tv';
+import CheatingVersion from './tv/cheatingVersion';
+import { SortingProvider } from './store/sortingContext';
+
 function App() {
 
   return (
-    <>
+    
+    <SortingProvider>
+      <WorkingSkeleton/>
     <SortingSelector />
     <CanvasImage/>
-    <TV/>
-    </>
+    <CheatingVersion/>
+    </SortingProvider>
+    
   );
 }
 

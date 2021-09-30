@@ -1,5 +1,4 @@
-import convert, { rgb } from 'color-convert';
-import _ from 'lodash';
+import convert from 'color-convert';
 
 function canvas(sortBy) {
 
@@ -15,32 +14,32 @@ function canvas(sortBy) {
 
     let sortedDataPoints = [];
     switch (sortBy) {
-        case 'r':
+        case 'Red':
             sortedDataPoints = sortbyRGB(dataPoints, 'r');
             break;
-        case 'g':
+        case 'Green':
             sortedDataPoints = sortbyRGB(dataPoints, 'g');
             break;
-        case 'b':
+        case 'Blue':
             sortedDataPoints = sortbyRGB(dataPoints, 'b');
             break;
 
-        case 'h':
+        case 'Hue':
             sortedDataPoints = sortbyHSL(dataPoints, 'h')
             break;
 
-        case 's':
+        case 'Saturation':
             sortedDataPoints = sortbyHSL(dataPoints, 's')
             break;
 
-        case 'l':
+        case 'Lightness':
             sortedDataPoints = sortbyHSL(dataPoints, 'l')
             break;
-        case 'random':
+        case 'Random':
             sortedDataPoints = randomShuffle(dataPoints)
             break;
         default:
-            sortedDataPoints = dataPoints;
+            sortedDataPoints = randomShuffle(dataPoints);
     }
 
     let imgData = context.createImageData(256, 128);
@@ -83,9 +82,9 @@ function sortbyHSL(rgbDataPoints, sortBy) {
     switch (sortBy) {
         case 'h': sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => h1 - h2 || s1 - s2 || l1 - l2);
             break;
-        case 's': sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => s1 - s2 || h1 - h2 || l1 - l2);
+        case 's': sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => s1 - s2 || l1 - l2 || h1 - h2);
             break;
-        case 'l': sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => l1 - l2 || h1 - h2 || s1 - s2);
+        case 'l': sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => l1 - l2 || s1 - s2 || h1 - h2);
             break;
         default: sortedHSL = hslDataPoints.sort(([h1, s1, l1], [h2, s2, l2]) => h1 - h2 || s1 - s2 || l1 - l2);
     }
