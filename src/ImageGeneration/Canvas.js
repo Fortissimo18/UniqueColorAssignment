@@ -78,7 +78,7 @@ function canvas(sortBy) {
 
     function toHSLArray(rgbDataPoints) {
         const hslDataPoints = rgbDataPoints.map((data, index) => {
-            let converted = convert.rgb.hsv(data[0], data[1], data[2]);
+            let converted = convert.rgb.hsl(data[0], data[1], data[2]);
             converted[3] = index; //store the original rgb sequence to the 4th place for sorting
             return converted;
         });

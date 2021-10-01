@@ -25,7 +25,7 @@ const Plan = () => (
                 <h2>Day 2</h2>
                 <ul>
                     <li>Build the remaining add-ons</li>
-                    <li>Check browser competibilities</li>
+                    <li>Check browser compatibilities</li>
                     <li>Check the performance</li>
                 </ul>
             </div>
