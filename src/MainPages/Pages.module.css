@@ -1,0 +1,25 @@
+.Pages {
+    margin-top: 10vh;
+}
+
+.Plan {
+    display              : inline-grid;
+    padding-top          : 3vh;
+    grid-template-columns: 22vw 22vw;
+    grid-gap             : 2vh 5vw;
+}
+
+.Plan h2 {
+    font-size     : 22px;
+    padding-bottom: 1vh;
+}
+
+.Plan ul {
+    padding-left: 4vw;
+}
+
+.Plan li {
+    font-size     : 18px;
+    text-align    : left;
+    padding-bottom: 2vh;
+}

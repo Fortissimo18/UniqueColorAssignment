@@ -1,0 +1,7 @@
+.CanvasImage {
+    display : inline-block;
+    position: relative;
+    top     : 3vh;
+    width   : var(--screen-width);
+    height  : var(--screen-height);
+}
