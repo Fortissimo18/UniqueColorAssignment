@@ -17,7 +17,7 @@ const sortOptions = [
 ]
 
 function DropDown() {
-    const [selectedValue, setSeletedValue] = useState("Random");
+    const [selectedValue, setSeletedValue] = useState("Hue");
     const [, setSortBy] = useContext(SortingContext);
 
     function handleSelection(_, data) {
